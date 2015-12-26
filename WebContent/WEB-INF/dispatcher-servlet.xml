@@ -18,16 +18,15 @@
 
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />		
+		<property name="dataSource" ref="dataSource" />
 		<property name="hibernateProperties">
 			<value>
 				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
 			</value>
 		</property>
-		<property name="mappingResources">
+		<property name="mappingLocations">
 			<list>
-				<value>cn/edu/bnu/land/model/BenefitAssign.hbm.xml</value>
-			
+				<value>classpath:/cn/edu/bnu/land/model/*.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
