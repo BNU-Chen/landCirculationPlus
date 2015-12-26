@@ -13,7 +13,17 @@
             }
         },
         "urlPrefix": "",
-        "exportPath": ""
+        "exportPath": "",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1137-inputEl": "a new version of the framework is available"
     },
     "xdsVersion": "3.1.0",
     "xdsBuild": 1943,
@@ -22,15 +32,14 @@
     "framework": "ext42",
     "viewOrderMap": {
         "view": [
-            "6dfade46-422a-4926-8247-544401bdb955",
-            "aee0a729-013f-4b22-91e8-277649f0fe3a"
+            "4a307726-56a6-4b8a-9693-ded16fd42711"
         ],
         "store": [
-            "674bf2b2-686b-4b8c-b4dc-81bf78eba26c"
+            "52222c25-dc78-47d6-8687-dad5fe0ce8c9"
         ],
         "controller": [],
         "model": [
-            "dfc9e757-6281-48f4-a9aa-f352a2d69453"
+            "f79ab7f7-26a3-4ed6-91bb-a6d270b8121c"
         ],
         "resource": [
             "dc5d0dbc-216e-4c03-b7fc-b331e2c99754",

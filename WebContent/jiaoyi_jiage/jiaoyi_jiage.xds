@@ -1,0 +1,38 @@
+{
+    "name": "jiaoyi_jiage",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "d8b45a8c-cb9c-4583-b579-bbb42ae11e9f"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "90c281a6-bf3b-496c-904a-ada36a3e96b6",
+            "f1bd11a1-f87a-4590-8ef4-dd2ab3ba915e"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

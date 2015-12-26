@@ -7,14 +7,14 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "MyModel"
+            "TaishiFind"
         ],
-        "name": "jiaoyi_taishi",
+        "name": "app_name",
         "stores": [
-            "MyJsonStore"
+            "TaishiFind"
         ],
         "views": [
-            "MyPanel"
+            "MyViewport"
         ]
     },
     "name": "Application",

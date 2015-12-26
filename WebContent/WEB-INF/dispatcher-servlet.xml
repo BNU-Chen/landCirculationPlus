@@ -18,17 +18,17 @@
 
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="mappingResources">
-			<list>
-				<value>cn/edu/bnu/land/model/Users.hbm.xml</value>
-			
-			</list>
-		</property>
+		<property name="dataSource" ref="dataSource" />		
 		<property name="hibernateProperties">
 			<value>
 				hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
 			</value>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>cn/edu/bnu/land/model/BenefitAssign.hbm.xml</value>
+			
+			</list>
 		</property>
 	</bean>
 	<bean id="txManager"

@@ -21,18 +21,13 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'MyModel'
+        'TaishiFind'
     ],
     stores: [
-        'MyJsonStore'
+        'TaishiFind'
     ],
     views: [
-        'MyPanel'
+        'MyViewport'
     ],
-    name: 'jiaoyi_taishi',
-
-    launch: function() {
-        Ext.create('jiaoyi_taishi.view.MyPanel', {renderTo: Ext.getBody()});
-    }
-
+    name: 'app_name'
 });
