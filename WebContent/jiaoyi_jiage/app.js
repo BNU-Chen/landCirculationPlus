@@ -20,6 +20,14 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
+    models: [
+        'TaishiPrice',
+        'TaishiPriceTextField'
+    ],
+    stores: [
+        'TaishiPrice',
+        'TaishiPriceCombox'
+    ],
     views: [
         'MyViewport'
     ],

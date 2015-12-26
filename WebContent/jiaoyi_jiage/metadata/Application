@@ -6,7 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
+        "models": [
+            "TaishiPrice",
+            "TaishiPriceTextField"
+        ],
         "name": "MyApp",
+        "stores": [
+            "TaishiPrice",
+            "TaishiPriceCombox"
+        ],
         "views": [
             "MyViewport"
         ]

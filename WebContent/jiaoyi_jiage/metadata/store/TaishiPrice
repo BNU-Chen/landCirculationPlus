@@ -30,7 +30,7 @@
                     "   searchDate2: ''\r",
                     "}"
                 ],
-                "url": null
+                "url": "../getBenefitList21"
             },
             "name": "MyAjaxProxy10",
             "designerId": "a3450c17-8122-4ffc-b4d8-48b5c3fc3d61",
