@@ -1,0 +1,26 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "TaishiVolume_Column",
+            "TaishiVolume_Pie",
+            "TaishiVolumeTextField"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "TaishiVolume_Column",
+            "TaishiVolume_Pie",
+            "TaishiVolumeCombox"
+        ],
+        "views": [
+            "MyViewport"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}
