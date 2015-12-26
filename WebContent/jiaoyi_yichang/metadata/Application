@@ -1,0 +1,31 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "TaishiAlarm_Pie",
+            "TaishiAlarmTable",
+            "TaishiAlarm_Canshu",
+            "TaishiPriceTextField"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "TaishiAlarm_Pie",
+            "TaishiAlarmCombox",
+            "TaishiAlarmTable",
+            "TaishiAlarm_Canshu"
+        ],
+        "views": [
+            "MyViewport",
+            "TaishiAlarm_Canshu",
+            "TaishiAlarm_Chart",
+            "TaishiAlarm"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

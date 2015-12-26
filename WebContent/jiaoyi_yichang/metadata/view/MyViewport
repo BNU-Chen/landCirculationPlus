@@ -1,0 +1,38 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MyViewport",
+        "id": "myViewport",
+        "layout": "fit"
+    },
+    "name": "MyViewport",
+    "designerId": "c8017978-6274-489b-82ba-2fb863b35515",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMyViewportAfterRender",
+                "implHandler": [
+                    "var tabs = Ext.getCmp('myViewport');",
+                    "tabs.removeAll(true);",
+                    "var newtab = tabs.add(Ext.widget('TaishiAlarm'));"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onMyViewportAfterRender",
+            "designerId": "8c458d98-6361-46a3-a163-9058b9c7c747"
+        }
+    ]
+}
