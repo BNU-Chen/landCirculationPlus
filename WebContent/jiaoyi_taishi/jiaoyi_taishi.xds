@@ -1,0 +1,43 @@
+{
+    "name": "jiaoyi_taishi",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "6dfade46-422a-4926-8247-544401bdb955",
+            "aee0a729-013f-4b22-91e8-277649f0fe3a"
+        ],
+        "store": [
+            "674bf2b2-686b-4b8c-b4dc-81bf78eba26c"
+        ],
+        "controller": [],
+        "model": [
+            "dfc9e757-6281-48f4-a9aa-f352a2d69453"
+        ],
+        "resource": [
+            "dc5d0dbc-216e-4c03-b7fc-b331e2c99754",
+            "16d310fd-a21d-4b9b-a111-97cf35798fc1"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
