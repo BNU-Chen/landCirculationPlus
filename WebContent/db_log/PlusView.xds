@@ -1,0 +1,42 @@
+{
+    "name": "PlusView",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "c8017978-6274-489b-82ba-2fb863b35515"
+        ],
+        "store": [
+            "dcb0bb5f-91eb-4190-a647-6caf578d0477"
+        ],
+        "controller": [],
+        "model": [
+            "2131c303-df89-4d23-856a-567432127fd8"
+        ],
+        "resource": [
+            "9a6e6869-8ac4-4e19-84b1-866c0a0bc55e",
+            "8c622eb8-f776-4352-9e8f-537669feec1c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-10-14 10:05:30 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="cn.edu.bnu.land.model.DbBackuprecord" table="db_backuprecord" catalog="tdlz">
+        <id name="version" type="java.lang.Integer">
+            <column name="Version" />
+            <generator class="identity" />
+        </id>
+        <property name="date" type="date">
+            <column name="Date" length="10" not-null="true">
+                <comment>&#177;&#184;&#183;&#221;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="size" type="java.lang.Integer">
+            <column name="Size">
+                <comment>&#180;&#243;&#208;&#161;</comment>
+            </column>
+        </property>
+        <property name="comment" type="string">
+            <column name="Comment" length="200">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

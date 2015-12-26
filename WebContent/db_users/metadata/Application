@@ -1,0 +1,48 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "uResourcesModel",
+            "uRightListModel",
+            "uRightResourcesModel",
+            "uRoleRightModel",
+            "uUserRoleModel",
+            "uUserInfoModel",
+            "uRoleInfoModel",
+            "uRightInfoModel",
+            "uDeptInfoModel"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "uRightListStore",
+            "uUserRoleStore",
+            "uUserInfoStore",
+            "uRoleInfoStore",
+            "uRightInfoStore",
+            "uDeptInfoStore"
+        ],
+        "views": [
+            "MyViewport",
+            "db_DeptInfoWindow",
+            "db_MapServerTab",
+            "db_RightInfoAddWindow",
+            "db_RightInfoWindow",
+            "db_RoleInfoAddWindow",
+            "db_RoleInfoWindow",
+            "db_RoleRightSettingWindow",
+            "db_ThematicMapConfigTab",
+            "db_UserInfoAddWindow",
+            "db_UserInfoEditTab",
+            "db_UserInfoWindow",
+            "db_UserRoleSettingWindow",
+            "db_DeptInfoAddWindow"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}
