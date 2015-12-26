@@ -1,0 +1,68 @@
+{
+    "name": "PlusView",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "bc86b673-9408-46bc-bb6b-ea193db0ea83",
+            "aaf03713-d890-43ee-863f-71be7345a2ce",
+            "fbcc81e3-2064-4726-a71c-05126b78bd4f",
+            "977be118-47eb-4a4f-8d33-3461c48f6659",
+            "da929c19-f8e6-40f5-a8d9-6124a2d51a67",
+            "39fabf71-d317-4e34-a1af-0b4f3406a08d",
+            "e88d3ea5-3a84-476b-9eae-66e15e557733",
+            "70dfb4ad-ecc2-4168-9ba0-284e903350c8",
+            "33e70a0a-fce3-4832-9ff8-bf23d1c251f0",
+            "ac9a080c-1e30-43d5-98eb-d560a7100674",
+            "56e85756-da8f-430a-b61b-ff987715258b",
+            "9cd43a92-3797-4f88-8886-00a93f204e83",
+            "48f6f06e-19a8-4c37-9254-9d29fd36773d",
+            "c8017978-6274-489b-82ba-2fb863b35515"
+        ],
+        "store": [
+            "17a2fe6f-3c85-4b14-9cb5-c5ea58b419de",
+            "130b3ce0-3787-4968-8ae6-6d504503257a",
+            "bd4bde78-7ac0-4111-b06e-c7d442c42827",
+            "0c4f59b2-c9d8-4b89-a981-511ad4de318a",
+            "81d549f7-f97d-4407-89c8-d8c23de8085b",
+            "cc023171-3227-4da2-97b9-88bbd91f18be"
+        ],
+        "controller": [],
+        "model": [
+            "fe290e07-3270-4535-91b7-00833341f3bd",
+            "290b361c-471e-4120-9927-876942f9926f",
+            "83e83b7f-14b0-4fbd-a4d8-7a603619599c",
+            "49d568c9-4533-44a3-abbb-f4a6d981a922",
+            "7c62d278-b87b-4506-8a76-0a8cac8e048f",
+            "b5dc416e-088c-4476-9dd6-b29614e9db6d",
+            "9366f00b-cd50-4ae0-89e1-5b9dc1a3e2c2",
+            "e592f6ee-5c70-4240-826c-d6fde629814c",
+            "484daf0d-676c-495d-a235-291117391acd"
+        ],
+        "resource": [
+            "9a6e6869-8ac4-4e19-84b1-866c0a0bc55e",
+            "8c622eb8-f776-4352-9e8f-537669feec1c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

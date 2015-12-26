@@ -1,0 +1,2307 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MyViewport",
+        "layout": "fit"
+    },
+    "name": "MyViewport",
+    "designerId": "c8017978-6274-489b-82ba-2fb863b35515",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "db_UserPrivilegeManagerTab",
+                "layout": "fit",
+                "title": "用户管理"
+            },
+            "name": "MyPanel",
+            "designerId": "c5105b2a-f105-4d12-bfc2-04d3d32ab628",
+            "cn": [
+                {
+                    "type": "Ext.tab.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "activeTab": 0
+                    },
+                    "name": "MyTabPanel",
+                    "designerId": "64e31758-d493-4734-b5ea-03ce235b8046",
+                    "cn": [
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "fit",
+                                "title": "用户信息管理"
+                            },
+                            "name": "MyPanel28",
+                            "designerId": "141b9e79-3c83-4b37-a5d7-3dc4c1a2d834",
+                            "cn": [
+                                {
+                                    "type": "Ext.tab.Tab",
+                                    "reference": {
+                                        "name": "tabConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "TabConfig",
+                                    "designerId": "e36553ad-9568-44d4-880f-c390266c85db"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "name": "MyToolbar31",
+                                    "designerId": "9fb62477-6399-460f-ba86-e931297b573e",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "emptyText": "请输入搜索关键字",
+                                                "fieldLabel": null,
+                                                "id": "searchKeyword_UserInfo",
+                                                "layout|flex": null
+                                            },
+                                            "name": "MyTextField130",
+                                            "designerId": "c222e6b6-cb27-4836-ba32-d07210c3b66a"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/file_view0.png",
+                                                "layout|flex": null,
+                                                "text": "搜索"
+                                            },
+                                            "name": "MyButton118",
+                                            "designerId": "8f59a17c-085a-40d0-bab0-ef12fd6a7df5",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick",
+                                                        "implHandler": [
+                                                            "var getKeyword = Ext.getCmp('searchKeyword_UserInfo').getValue();\r",
+                                                            "console.log(\"keyword:\",getKeyword);\r",
+                                                            "var mystore = Ext.StoreMgr.get('uUserInfoStore'); //获得store对象\r",
+                                                            "//在load事件中添加参数\r",
+                                                            "mystore.load(\r",
+                                                            "{\r",
+                                                            "    params :\r",
+                                                            "    {\r",
+                                                            "        searchKeyword : getKeyword\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            ");\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick",
+                                                    "designerId": "5f4ae510-baf6-4718-a762-b460e48d38a6"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_refresh.png",
+                                                "layout|flex": null,
+                                                "text": "刷新"
+                                            },
+                                            "name": "MyButton119",
+                                            "designerId": "e841890e-bc14-4c85-aa77-54e047aa3c98",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick1",
+                                                        "implHandler": [
+                                                            "Ext.getCmp('searchKeyword_UserInfo').setValue('');\r",
+                                                            "var mystore = Ext.StoreMgr.get('uUserInfoStore'); //获得store对象\r",
+                                                            "mystore.load();\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick1",
+                                                    "designerId": "3d514d82-de40-41f7-acbe-8129349f0f51"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "添加"
+                                            },
+                                            "name": "MyButton120",
+                                            "designerId": "764ab4cb-a95b-42d6-ba7d-5a38a0e63c85",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick2",
+                                                        "implHandler": [
+                                                            "var win = Ext.widget('db_UserInfoAddWindow');\r",
+                                                            "win.show();"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick2",
+                                                    "designerId": "5fee67f0-5768-4d8b-ab62-0423490d69cf"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "编辑"
+                                            },
+                                            "name": "MyButton121",
+                                            "designerId": "eb0c556d-cc4f-4a1b-bdb8-c590f80dc05e",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick22",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('db_UserInfoGrid');\r",
+                                                            "\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "\r",
+                                                            "if(record.length === 0){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的行！');\r",
+                                                            "    return;\r",
+                                                            "}else if(record.length >1){\r",
+                                                            "    Ext.Msg.alert('提示','您只能编辑一个用户，请重新选择。');\r",
+                                                            "    return;\r",
+                                                            "}else {\r",
+                                                            "\r",
+                                                            "    var win = Ext.widget('db_UserInfoWindow');\r",
+                                                            "    win.show();\r",
+                                                            "\r",
+                                                            "    var form = Ext.getCmp('db_UserWindowForm');\r",
+                                                            "    form.loadRecord(record[0]);\r",
+                                                            "\r",
+                                                            "    //对显示的结果进行处理\r",
+                                                            "    //注册日期的处理\r",
+                                                            "    var registerdateField = Ext.getCmp('users_registerdatew');\r",
+                                                            "    var value = registerdateField.getValue();\r",
+                                                            "    var date = new Date(value);\r",
+                                                            "    console.log('date',date);\r",
+                                                            "    if(date instanceof Date){   \r",
+                                                            "        var str = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();    \r",
+                                                            "        console.log('date2',str);\r",
+                                                            "        registerdateField.setValue(str);\r",
+                                                            "    }\r",
+                                                            "    //密码框的处理\r",
+                                                            "    var pwdField = Ext.getCmp('users_passwordw');\r",
+                                                            "    pwdField.setValue(\"\");\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick22",
+                                                    "designerId": "1f30ea2a-8183-4f4b-a9a0-11dffa7293bf"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "删除"
+                                            },
+                                            "name": "MyButton122",
+                                            "designerId": "d941d042-d2db-4fb3-831a-720a1fa439c6",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick221",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('db_UserInfoGrid');\r",
+                                                            "\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "\r",
+                                                            "if(record.length === 0){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的行！');\r",
+                                                            "    return;\r",
+                                                            "}else{\r",
+                                                            "    var  userIds =new Array(record.length);\r",
+                                                            "    var msg = '';\r",
+                                                            "    for(var i = 0;i<record.length;i++){\r",
+                                                            "        userIds[i] = record[i].get(\"userId\");\r",
+                                                            "        msg += record[i].get(\"userName\") + '<br/>';\r",
+                                                            "    }        \r",
+                                                            "    \r",
+                                                            "    Ext.Msg.confirm('提示', '您正在删除以下用户：<br/>' + msg+'确认删除？', getResult);\r",
+                                                            "    function getResult(confirm)\r",
+                                                            "    {\r",
+                                                            "        if (confirm == \"yes\"){\r",
+                                                            "            Ext.Ajax.request(\r",
+                                                            "                {\r",
+                                                            "                    url : 'del_UserInfoById',\r",
+                                                            "                    params :\r",
+                                                            "                    {\r",
+                                                            "                        userIds : userIds\r",
+                                                            "                    },\r",
+                                                            "                    success : function (response){\r",
+                                                            "                        Ext.Msg.alert('成功提示', '记录删除成功。');\r",
+                                                            "                        //successResult();\r",
+                                                            "                        var mystore = Ext.StoreMgr.get('uUserInfoStore');\r",
+                                                            "                        mystore.load();\r",
+                                                            "                    },\r",
+                                                            "                    failure : function (response){\r",
+                                                            "                        //failedResult();\r",
+                                                            "                        // Ext.Msg.alert('失败提示', '记录删除失败。');\r",
+                                                            "                    }\r",
+                                                            "                });\r",
+                                                            "        }\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick221",
+                                                    "designerId": "9f641954-e31d-4a66-81ad-de40c6ff1b34"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.resizer.Splitter",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": null
+                                            },
+                                            "name": "MySplitter",
+                                            "designerId": "60b4d754-75ef-4ec5-9da1-3143412558bb"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "设置部门"
+                                            },
+                                            "name": "MyButton123",
+                                            "designerId": "60f3b464-1687-4e96-b238-aac6acedf107",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick2211",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('db_UserInfoGrid');\r",
+                                                            "\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "\r",
+                                                            "if(record.length === 0 ){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的行！');\r",
+                                                            "    return;\r",
+                                                            "}else if(record.length < 1){\r",
+                                                            "    Ext.Msg.alert('提示','您只能同时编辑一个用户信息，请重新选择。');\r",
+                                                            "    return;\r",
+                                                            "}else{\r",
+                                                            "    var win = Ext.widget('db_UserRoleSettingWindow');\r",
+                                                            "    //设置window中的用户名，便于查询\r",
+                                                            "    var userName = record[0].get('userName');\r",
+                                                            "    Ext.getCmp('urSet_userName').setText(userName);\r",
+                                                            "    win.show();\r",
+                                                            "\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick2211",
+                                                    "designerId": "2adfa555-ff9f-41e6-a88e-bca9c53714d5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_role.png",
+                                                "layout|flex": null,
+                                                "text": "用户角色设置"
+                                            },
+                                            "name": "MyButton124",
+                                            "designerId": "5867711e-c62a-47e1-88db-ba784ef9dd91",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick22111",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('db_UserInfoGrid');\t\t//获取表格grid\r",
+                                                            "var recordsSelected = grid.getSelectionModel().getSelection();\t//获取选中的记录\r",
+                                                            "\r",
+                                                            "if(recordsSelected.length === 0){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的用户！');    \r",
+                                                            "    return;    \r",
+                                                            "}else if(recordsSelected.length > 1){\r",
+                                                            "    Ext.Msg.alert('提示','请选中单个用户进行操作！');    \r",
+                                                            "    return;\r",
+                                                            "}else{\r",
+                                                            "    var win = Ext.widget('db_UserRoleSettingWindow');\r",
+                                                            "\r",
+                                                            "    //设置window中的用户名，便于查询\r",
+                                                            "    var userName = recordsSelected[0].get('userName');\r",
+                                                            "    Ext.getCmp('urSet_userName').setText(userName);\r",
+                                                            "\r",
+                                                            "    //显示window\r",
+                                                            "    win.show();\r",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick22111",
+                                                    "designerId": "7cfd4289-21ea-470e-b62c-2843a079467b"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoScroll": true,
+                                        "id": "db_UserInfoGrid",
+                                        "store": "uUserInfoStore",
+                                        "title": null
+                                    },
+                                    "name": "MyGridPanel24",
+                                    "designerId": "ca59c920-0783-44a0-a97f-6e27b1ee5e39",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.grid.RowNumberer",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "序号",
+                                                "text": "序号",
+                                                "width": 40
+                                            },
+                                            "name": "MyRowNumberer18",
+                                            "designerId": "20f2d57e-6634-4f69-8f92-de3d6d6d4237"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "userId",
+                                                "text": "用户编号",
+                                                "width": 70
+                                            },
+                                            "name": "MyColumn133",
+                                            "designerId": "9491a566-1140-45e6-bfc9-e742f0d6632b"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "userName",
+                                                "text": "用户名",
+                                                "width": 100
+                                            },
+                                            "name": "MyColumn134",
+                                            "designerId": "6c66cf59-9e64-4162-b940-ca64e80ac587"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "deptId",
+                                                "text": "部门",
+                                                "width": 100
+                                            },
+                                            "name": "MyColumn135",
+                                            "designerId": "2e844137-4039-4453-b9a1-bc215a8aa3b3"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Action",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "enabled",
+                                                "designer|displayName": "角色",
+                                                "emptyCellText": null,
+                                                "icon": "images/table_edit.png",
+                                                "menuText": "",
+                                                "width": 120
+                                            },
+                                            "name": "MyActionColumn",
+                                            "designerId": "08e5669d-b6fa-4e79-a245-ad92f6be6bde",
+                                            "cn": [
+                                                {
+                                                    "type": "basicfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "grid",
+                                                            "rowIndex",
+                                                            "colIndex",
+                                                            "actionItem",
+                                                            "event",
+                                                            "record",
+                                                            "row"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "var win = Ext.widget('db_UserRoleSettingWindow');\r",
+                                                            "win.show();\r",
+                                                            "\r",
+                                                            "//查询该用户的所有用户\r",
+                                                            "Ext.Ajax.request(\r",
+                                                            "{\r",
+                                                            "    url : 'del_UserInfoById',\r",
+                                                            "    params :\r",
+                                                            "    {\r",
+                                                            "        userId : userId\r",
+                                                            "    },            \r",
+                                                            "    success : function (response){\r",
+                                                            "        Ext.Msg.alert('成功提示', '记录删除成功。');\r",
+                                                            "        //successResult();\r",
+                                                            "        var mystore = Ext.StoreMgr.get('uUserInfoStore');\r",
+                                                            "        mystore.load();\r",
+                                                            "    },\r",
+                                                            "    failure : function (response){\r",
+                                                            "        //failedResult();\r",
+                                                            "        // Ext.Msg.alert('失败提示', '记录删除失败。');\r",
+                                                            "    }\r",
+                                                            "});\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "//\t\tvar keyword = record.get('userName').getValue();\r",
+                                                            "//\r",
+                                                            "//\t\tvar extra_params={\r",
+                                                            "//\t\t    searchKeyword:keyword\r",
+                                                            "//\t\t};\r",
+                                                            "//\t\tExt.apply(store.proxy.extraParams,extra_params);\r",
+                                                            "//\r",
+                                                            "//\t\tif (colIndex === undefined || colIndex < 2) {\r",
+                                                            "//\t\t    return;\r",
+                                                            "//\t\t}\r",
+                                                            "//\t\tvar win = Ext.widget('db_UserInfoWindow');\r",
+                                                            "//\t\twin.show();\r",
+                                                            "//\r",
+                                                            "//\t\t//var form = Ext.widget('db_UserWindowForm');\r",
+                                                            "//\t\tvar form = Ext.getCmp('db_UserWindowForm');\r",
+                                                            "//\t\tconsole.log(\"form:\",form);\r",
+                                                            "//\t\tform.loadRecord(record);\r",
+                                                            "//\r",
+                                                            "//\r",
+                                                            "//\t\t//对显示的结果进行处理\r",
+                                                            "//\t\t//注册日期的处理\r",
+                                                            "//\t\tvar registerdateField = Ext.getCmp('users_registerdatew');\r",
+                                                            "//\t\tvar value = registerdateField.getValue();\r",
+                                                            "//\t\tvar date = new Date(value);\r",
+                                                            "//\t\tconsole.log('date',date);\r",
+                                                            "//\t\tif(date instanceof Date){   \r",
+                                                            "//\t\t    var str = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();    \r",
+                                                            "//\t\t    console.log('date2',str);\r",
+                                                            "//\t\t    registerdateField.setValue(str);\r",
+                                                            "//\t\t}\r",
+                                                            "//\t\t//密码框的处理\r",
+                                                            "//\t\tvar pwdField = Ext.getCmp('users_passwordw');\r",
+                                                            "//\t\tpwdField.setValue(\"\");"
+                                                        ]
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "9c57741d-f474-4032-9409-613aa69227ca"
+                                                },
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "value",
+                                                            "metaData",
+                                                            "record",
+                                                            "rowIndex",
+                                                            "colIndex",
+                                                            "store",
+                                                            "view"
+                                                        ],
+                                                        "fn": "renderer",
+                                                        "implHandler": [
+                                                            "var deptId = record.get('deptId');\r",
+                                                            "return '<div style=\"float:right; font-size: 13px; line-height: 1em;\">' + deptId + '</div>'"
+                                                        ]
+                                                    },
+                                                    "name": "renderer",
+                                                    "designerId": "cd8b1979-925d-4a5a-8a7b-01eae54c8e82"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "trueName",
+                                                "text": "真实姓名",
+                                                "width": 80
+                                            },
+                                            "name": "MyColumn136",
+                                            "designerId": "b3609680-dca2-4be8-95c6-4c59320360f5"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "email",
+                                                "text": "邮箱地址",
+                                                "width": 120
+                                            },
+                                            "name": "MyColumn137",
+                                            "designerId": "b47c0a8b-88af-4b0f-ab17-bc81dbbeb641"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "mobileNum",
+                                                "text": "手机号码",
+                                                "width": 100
+                                            },
+                                            "name": "MyColumn138",
+                                            "designerId": "bed9af22-9165-4905-a7ff-c3708abf6d88"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "phoneNum",
+                                                "text": "固定电话"
+                                            },
+                                            "name": "MyColumn139",
+                                            "designerId": "473e5bc7-5092-409d-931a-c3ce1f6dbd57"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "description",
+                                                "text": "用户描述",
+                                                "width": 200
+                                            },
+                                            "name": "MyColumn140",
+                                            "designerId": "0f85d7f4-6c5c-4e6a-8ff0-bee5443ee49a"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Date",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "registerdate",
+                                                "format": "Y-m-d",
+                                                "text": "注册日期"
+                                            },
+                                            "name": "MyDateColumn21",
+                                            "designerId": "dcbfde45-4ec0-4986-99c7-bc61cfc0be5f"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Boolean",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "enabled",
+                                                "falseText": "否",
+                                                "text": "是否可用",
+                                                "trueText": "是",
+                                                "width": 60
+                                            },
+                                            "name": "MyBooleanColumn4",
+                                            "designerId": "b432ef9e-2611-4853-a065-79d738ac929f"
+                                        },
+                                        {
+                                            "type": "Ext.grid.View",
+                                            "reference": {
+                                                "name": "viewConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyGridView24",
+                                            "designerId": "11293e83-3be8-4261-9d59-7d9b79c8694f"
+                                        },
+                                        {
+                                            "type": "Ext.selection.CheckboxModel",
+                                            "reference": {
+                                                "name": "selModel",
+                                                "type": "object"
+                                            },
+                                            "codeClass": "Ext.selection.CheckboxModel",
+                                            "userConfig": {
+                                                "designer|displayName": null
+                                            },
+                                            "name": "MyCheckboxSelectionModel17",
+                                            "designerId": "b79dca21-58e3-49ca-9fa4-738d4f3986d5"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onGridpanelCellClick",
+                                                "implHandler": [
+                                                    "//console.log('this is cellclick');\r",
+                                                    "//console.log('tableview:',tableview);\r",
+                                                    "//console.log('td:',td);\r",
+                                                    "//console.log('cellIndex:',cellIndex);\r",
+                                                    "//console.log('record:',record);\r",
+                                                    "//console.log('tr:',tr);\r",
+                                                    "//console.log('rowIndex:',rowIndex);\r",
+                                                    "\r",
+                                                    ""
+                                                ],
+                                                "name": "cellclick",
+                                                "scope": "me"
+                                            },
+                                            "name": "onGridpanelCellClick",
+                                            "designerId": "88f499ff-24f7-441d-af65-548bb0400ba8"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "fit",
+                                "title": "角色信息管理"
+                            },
+                            "name": "MyPanel29",
+                            "designerId": "3e0e871b-92b1-4378-8511-199057ec398a",
+                            "cn": [
+                                {
+                                    "type": "Ext.tab.Tab",
+                                    "reference": {
+                                        "name": "tabConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "TabConfig1",
+                                    "designerId": "4ad1d769-1895-4149-84eb-ff9ab1101be8"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "name": "MyToolbar32",
+                                    "designerId": "8ff96b1e-fce8-4d68-8fe8-939ac7eea977",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "emptyText": "请输入搜索关键字",
+                                                "fieldLabel": null,
+                                                "id": "searchKeyword_roleInfo",
+                                                "layout|flex": null
+                                            },
+                                            "name": "MyTextField131",
+                                            "designerId": "ab7899ae-eb3d-4375-835c-a761d4e83d61"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/file_view0.png",
+                                                "layout|flex": null,
+                                                "text": "搜索"
+                                            },
+                                            "name": "MyButton125",
+                                            "designerId": "e4c0c983-3888-49d6-bd23-7519ec25eff8",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick3",
+                                                        "implHandler": [
+                                                            "var getKeyword = Ext.getCmp('searchKeyword_roleInfo').getValue();\r",
+                                                            "console.log(\"keyword:\",getKeyword);\r",
+                                                            "var mystore = Ext.StoreMgr.get('uRoleInfoStore'); //获得store对象\r",
+                                                            "//在load事件中添加参数\r",
+                                                            "mystore.load({\r",
+                                                            "    params :\r",
+                                                            "    {\r",
+                                                            "        searchKeyword : getKeyword,\r",
+                                                            "        enabled:\"true\"\r",
+                                                            "    }\r",
+                                                            "});"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick3",
+                                                    "designerId": "ba36975d-a956-4b44-905e-921d5603f3c1"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_refresh.png",
+                                                "layout|flex": null,
+                                                "text": "刷新"
+                                            },
+                                            "name": "MyButton126",
+                                            "designerId": "e7512311-2ff6-42ac-a785-9b269ee86705",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick11",
+                                                        "implHandler": [
+                                                            "Ext.getCmp('searchKeyword_roleInfo').setValue('');\r",
+                                                            "var mystore = Ext.StoreMgr.get('uRoleInfoStore'); //获得store对象\r",
+                                                            "mystore.load();\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick11",
+                                                    "designerId": "959051b4-d904-4f90-b98c-968c2ea5511c"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "添加角色"
+                                            },
+                                            "name": "MyButton127",
+                                            "designerId": "ef7f10d3-cdca-4f76-ad09-8bf34b4f8b11",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick21",
+                                                        "implHandler": [
+                                                            "var win = Ext.widget('db_RoleInfoAddWindow');\r",
+                                                            "win.show();\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick21",
+                                                    "designerId": "1b74c6e5-c207-4049-a412-6808802aa37d"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "编辑"
+                                            },
+                                            "name": "MyButton128",
+                                            "designerId": "f2400420-5dfe-4c92-bdb2-639bef5b72e9",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick212",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('db_RoleInfoGrid');\r",
+                                                            "\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "\r",
+                                                            "if(record.length === 0){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的行！');\r",
+                                                            "    return;\r",
+                                                            "}else if(record.length >1){\r",
+                                                            "    Ext.Msg.alert('提示','您只能编辑一个角色信息，请重新选择。');\r",
+                                                            "    return;\r",
+                                                            "}else {\r",
+                                                            "    \r",
+                                                            "    var win = Ext.widget('db_RoleInfoWindow');\r",
+                                                            "    win.show();\r",
+                                                            "    \r",
+                                                            "    var form = Ext.getCmp('db_RoleInfoWindowForm').getForm();\r",
+                                                            "    form.loadRecord(record[0]);\r",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick212",
+                                                    "designerId": "2f7a0c96-f889-4d2a-a1a7-a60cb319079d"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "删除"
+                                            },
+                                            "name": "MyButton129",
+                                            "designerId": "05fa1f2f-ef16-41a0-a2e2-69e65c5c7744",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick2121",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('db_RoleInfoGrid');\r",
+                                                            "\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "\r",
+                                                            "if(record.length === 0){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的行！');\r",
+                                                            "    return;\r",
+                                                            "}else{\r",
+                                                            "    var  roleIds =new Array(record.length);\r",
+                                                            "    var msg = '';\r",
+                                                            "    for(var i = 0;i<record.length;i++){\r",
+                                                            "        roleIds[i] = record[i].get(\"roleId\");\r",
+                                                            "        msg += record[i].get(\"roleName\") + '<br/>';\r",
+                                                            "    }\r",
+                                                            "    \r",
+                                                            "    Ext.Msg.confirm('提示', '您正在删除以下角色：<br/>' + msg+'确认删除？', getResult);\r",
+                                                            "    function getResult(confirm)\r",
+                                                            "    {\r",
+                                                            "        console.log('confirm:', confirm);\r",
+                                                            "        if (confirm == \"yes\"){\r",
+                                                            "            \r",
+                                                            "            Ext.Ajax.request(\r",
+                                                            "                {\r",
+                                                            "                    url : 'del_RoleInfoById',\r",
+                                                            "                    params :\r",
+                                                            "                    {\r",
+                                                            "                        roleIds : roleIds\r",
+                                                            "                    },\r",
+                                                            "                    success : function (response){\r",
+                                                            "                        Ext.Msg.alert('成功提示', '角色删除成功。');                \r",
+                                                            "                        var mystore = Ext.StoreMgr.get('uRoleInfoStore');\r",
+                                                            "                        mystore.load();\r",
+                                                            "                    },\r",
+                                                            "                    failure : function (response){\r",
+                                                            "                        \r",
+                                                            "                    }\r",
+                                                            "                });\r",
+                                                            "        }\r",
+                                                            "    }\r",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick2121",
+                                                    "designerId": "4f194504-516e-4a79-b525-981024056aac"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.resizer.Splitter",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": null
+                                            },
+                                            "name": "MySplitter1",
+                                            "designerId": "c8e00d8d-8935-4dbe-9a43-5909929911ab"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_right.png",
+                                                "layout|flex": null,
+                                                "text": "修改权限"
+                                            },
+                                            "name": "MyButton130",
+                                            "designerId": "37f1e4a1-4eaa-4e93-a195-b9219a76ac52",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick21211",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('db_RoleInfoGrid');\t\t//获取表格grid\r",
+                                                            "var recordsSelected = grid.getSelectionModel().getSelection();\t//获取选中的记录\r",
+                                                            "\r",
+                                                            "if(recordsSelected.length === 0){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的角色！');    \r",
+                                                            "    return;    \r",
+                                                            "}else if(recordsSelected.length > 1){\r",
+                                                            "    Ext.Msg.alert('提示','请选中单个角色进行操作！');    \r",
+                                                            "    return;\r",
+                                                            "}else{\r",
+                                                            "    var win = Ext.widget('db_RoleRightSettingWindow');\r",
+                                                            "\r",
+                                                            "    //设置window中的角色id，便于查询\r",
+                                                            "    var roleId = recordsSelected[0].get('roleId');\r",
+                                                            "    Ext.getCmp('rrSet_roleId').setText(roleId);\r",
+                                                            "\r",
+                                                            "    //显示window\r",
+                                                            "    win.show();\r",
+                                                            "}\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick21211",
+                                                    "designerId": "4f4b556e-49ef-4b70-9ab7-c26f8cb92aea"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "db_RoleInfoGrid",
+                                        "store": "uRoleInfoStore",
+                                        "title": null
+                                    },
+                                    "name": "MyGridPanel25",
+                                    "designerId": "4dce6d12-9ed7-4621-9bbf-b0e1182a95d6",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.grid.RowNumberer",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "序号",
+                                                "text": "序号",
+                                                "width": 40
+                                            },
+                                            "name": "MyRowNumberer19",
+                                            "designerId": "3028f517-2576-4ec7-9a7b-ea0b1d943a91"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "roleNameCn",
+                                                "text": "角色名称",
+                                                "width": 120
+                                            },
+                                            "name": "MyColumn141",
+                                            "designerId": "21114578-7cbe-4efd-af58-c437f5feff2c"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "roleName",
+                                                "text": "角色标识",
+                                                "width": 150
+                                            },
+                                            "name": "MyColumn142",
+                                            "designerId": "d23e58ed-0a23-4dba-a326-b32c79fc87b4"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Boolean",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "enabled",
+                                                "falseText": "否",
+                                                "text": "是否启用",
+                                                "trueText": "是",
+                                                "width": 60
+                                            },
+                                            "name": "MyBooleanColumn5",
+                                            "designerId": "72adeb71-0070-4128-83ee-207f868ca499"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "description",
+                                                "text": "描述",
+                                                "width": 400
+                                            },
+                                            "name": "MyColumn143",
+                                            "designerId": "77d78333-00db-4f1a-b158-947626e402eb"
+                                        },
+                                        {
+                                            "type": "Ext.grid.View",
+                                            "reference": {
+                                                "name": "viewConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyGridView25",
+                                            "designerId": "cceb15da-66b1-4e62-9b47-0bceed572273"
+                                        },
+                                        {
+                                            "type": "Ext.selection.CheckboxModel",
+                                            "reference": {
+                                                "name": "selModel",
+                                                "type": "object"
+                                            },
+                                            "codeClass": "Ext.selection.CheckboxModel",
+                                            "userConfig": {
+                                                "designer|displayName": null
+                                            },
+                                            "name": "MyCheckboxSelectionModel18",
+                                            "designerId": "4fd92818-68f8-4a3d-8b07-29169f50b052"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoScroll": true,
+                                "layout": "fit",
+                                "title": "权限信息管理"
+                            },
+                            "name": "MyPanel30",
+                            "designerId": "c558563b-3704-4449-8f56-327d92f8ab79",
+                            "cn": [
+                                {
+                                    "type": "Ext.tab.Tab",
+                                    "reference": {
+                                        "name": "tabConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "TabConfig2",
+                                    "designerId": "2bd7f3fa-c191-473d-bc79-8235a9472ec0"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "name": "MyToolbar33",
+                                    "designerId": "5668ca30-6a3d-44db-8fcc-3451b8136e2b",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "emptyText": "请输入搜索关键字",
+                                                "fieldLabel": null,
+                                                "id": "searchKeyword_RightInfo",
+                                                "layout|flex": null
+                                            },
+                                            "name": "MyTextField132",
+                                            "designerId": "d7fc59b8-7cee-4103-aeda-c8bf2d73e0f8"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/file_view0.png",
+                                                "layout|flex": null,
+                                                "text": "搜索"
+                                            },
+                                            "name": "MyButton131",
+                                            "designerId": "e860eb4a-4b24-4df2-a1ff-9988f451a33d",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick31",
+                                                        "implHandler": [
+                                                            "var getKeyword = Ext.getCmp('searchKeyword_RightInfo').getValue();\r",
+                                                            "//console.log(\"keyword:\",getKeyword);\r",
+                                                            "var mystore = Ext.StoreMgr.get('uRightInfoStore'); //获得store对象\r",
+                                                            "//在load事件中添加参数\r",
+                                                            "mystore.load({\r",
+                                                            "    params :{\r",
+                                                            "        searchKeyword : getKeyword,\r",
+                                                            "        limit:'300'\r",
+                                                            "    }\r",
+                                                            "});\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick31",
+                                                    "designerId": "12efd19d-bf24-4066-b348-7a1fcf2704d7"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_refresh.png",
+                                                "layout|flex": null,
+                                                "text": "刷新"
+                                            },
+                                            "name": "MyButton132",
+                                            "designerId": "0fae2535-c43f-4c11-a7bf-a717614c3e87",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick111",
+                                                        "implHandler": [
+                                                            "Ext.getCmp('searchKeyword_RightInfo').setValue('');\r",
+                                                            "var mystore = Ext.StoreMgr.get('uRightInfoStore'); //获得store对象\r",
+                                                            "mystore.load();\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick111",
+                                                    "designerId": "9c9ff6cb-c0b6-4886-893e-867c2f336a80"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "添加权限"
+                                            },
+                                            "name": "MyButton133",
+                                            "designerId": "7672c04d-b5f8-4602-ad2c-ec6fb925d679",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick211",
+                                                        "implHandler": [
+                                                            "//取得上一级部门id\r",
+                                                            "var grid = Ext.getCmp('rightInfoGrid');\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "if(record.length === 0){\r",
+                                                            "    Ext.MessageBox.confirm('提示','添加新的权限需要先指定上一级权限，如果您没有在列表中勾选上一级权限，</br>那么您添加的权限为最高级别。确定添加？', function(btn){        \r",
+                                                            "        if(btn == \"yes\"){            \r",
+                                                            "            doShowWin(0);\r",
+                                                            "        }\r",
+                                                            "    });\r",
+                                                            "    return;\r",
+                                                            "    \r",
+                                                            "}else{    \r",
+                                                            "    doShowWin(1);\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "function doShowWin(level){\r",
+                                                            "    console.log('level:',level);\r",
+                                                            "    var win = Ext.widget('db_RightInfoAddWindow');\r",
+                                                            "    win.show();\r",
+                                                            "    \r",
+                                                            "    var rightIdField = Ext.getCmp('wAdd_parentRightId');\r",
+                                                            "    var rightNameField = Ext.getCmp('wAdd_parentRightName');\r",
+                                                            "    //对显示的内容进行处理\r",
+                                                            "    switch(level){\r",
+                                                            "        case 0:\t//如果没有上级部门\r",
+                                                            "            rightIdField.setValue(\"0000000000\");\t//如果没有上一级部门，则设为0\r",
+                                                            "            rightNameField.disable();\r",
+                                                            "            break;\r",
+                                                            "        case 1:\t//如果有上级部门\r",
+                                                            "            var  rightId = record[0].get(\"rightId\");\t//取得上级部门id            \r",
+                                                            "            rightIdField.setValue(rightId);\r",
+                                                            "            //对部门名称进行处理\r",
+                                                            "            var rightName = record[0].get(\"rightName\");\t//取得上级部门名称\r",
+                                                            "            \r",
+                                                            "            var index = rightName.lastIndexOf(\"&nbsp;\");\r",
+                                                            "            if(index >= 0){\r",
+                                                            "                var substr = rightName.substring(index+6,rightName.length);\r",
+                                                            "                rightNameField.setValue(substr);\r",
+                                                            "            }    \r",
+                                                            "            break;\r",
+                                                            "    }\r",
+                                                            "    \r",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick211",
+                                                    "designerId": "2b88a55b-f2b2-4adc-9117-cf5586d22e11"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "编辑"
+                                            },
+                                            "name": "MyButton134",
+                                            "designerId": "fd8773f7-e00c-4768-8e21-6769990cc4ae",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick2111",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('rightInfoGrid');\r",
+                                                            "\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "\r",
+                                                            "if(record.length === 0){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的行！');\r",
+                                                            "    return;\r",
+                                                            "}else if(record.length >1){\r",
+                                                            "    Ext.Msg.alert('提示','您只能编辑一个权限信息，请重新选择。');\r",
+                                                            "    return;\r",
+                                                            "}else {    \r",
+                                                            "    var win = Ext.widget('db_RightInfoWindow');\r",
+                                                            "    win.show();\r",
+                                                            "    \r",
+                                                            "    var form = Ext.getCmp('db_RightInfoWindowForm');\r",
+                                                            "    form.loadRecord(record[0]);\r",
+                                                            "    \r",
+                                                            "    //对显示的内容进行处理\r",
+                                                            "    //对权限名称进行处理\r",
+                                                            "    var rightNameField = Ext.getCmp('w_rightName');\r",
+                                                            "    var value = rightNameField.getValue();\r",
+                                                            "    var index = value.lastIndexOf(\"&nbsp;\");\r",
+                                                            "    console.log(index);\r",
+                                                            "    if(index>=0){\r",
+                                                            "        var substr = value.substring(index+6,value.length);\r",
+                                                            "        rightNameField.setValue(substr);\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick2111",
+                                                    "designerId": "d15ee2bb-a84a-4f93-80c3-b29fd173af9c"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "删除"
+                                            },
+                                            "name": "MyButton135",
+                                            "designerId": "1ffc7a82-881f-4e7b-b014-3dbe8d19f9ac",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick21111",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('rightInfoGrid');\r",
+                                                            "\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "\r",
+                                                            "if(record.length === 0){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的行！');\r",
+                                                            "    return;\r",
+                                                            "}else{\r",
+                                                            "    var  rightIds =new Array(record.length);\r",
+                                                            "    var msg = '';\r",
+                                                            "    for(var i = 0;i<record.length;i++){\r",
+                                                            "        rightIds[i] = record[i].get(\"rightId\");\r",
+                                                            "        //去除权限名称的空格\r",
+                                                            "        var rightName = record[i].get('rightName');\r",
+                                                            "        var index = rightName.lastIndexOf(\"&nbsp;\");\r",
+                                                            "        var substr;\r",
+                                                            "        if(index>=0){\r",
+                                                            "            substr = rightName.substring(index+6,rightName.length);    \r",
+                                                            "        }\r",
+                                                            "        msg += substr + '<br/>';\r",
+                                                            "    }\r",
+                                                            "    \r",
+                                                            "    Ext.Msg.confirm('提示', '您正在删除以下权限：<br/>' + msg+'确认删除？', getResult);\r",
+                                                            "    function getResult(confirm)\r",
+                                                            "    {\r",
+                                                            "        if (confirm == \"yes\"){\r",
+                                                            "            Ext.Ajax.request(\r",
+                                                            "                {\r",
+                                                            "                    url : 'del_RightInfoById',\r",
+                                                            "                    params :\r",
+                                                            "                    {\r",
+                                                            "                        rightIds : rightIds\r",
+                                                            "                    },            \r",
+                                                            "                    success : function (response){\r",
+                                                            "                        Ext.Msg.alert('成功提示', '权限删除成功。');\r",
+                                                            "                        //successResult();\r",
+                                                            "                        var mystore = Ext.StoreMgr.get('uRightInfoStore');\r",
+                                                            "                        mystore.load();\r",
+                                                            "                    },\r",
+                                                            "                    failure : function (response){\r",
+                                                            "                        //failedResult();\r",
+                                                            "                        // Ext.Msg.alert('失败提示', '记录删除失败。');\r",
+                                                            "                    }\r",
+                                                            "                });\r",
+                                                            "        }\r",
+                                                            "    }\r",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick21111",
+                                                    "designerId": "95ea9f56-ffa7-4a70-9e47-c20021d616eb"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoScroll": true,
+                                        "id": "rightInfoGrid",
+                                        "store": "uRightInfoStore",
+                                        "title": null
+                                    },
+                                    "name": "MyGridPanel26",
+                                    "designerId": "866a2818-2c59-4fa1-a5c6-e1b7fe33e882",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.grid.RowNumberer",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "序号",
+                                                "text": "序号",
+                                                "width": 40
+                                            },
+                                            "name": "MyRowNumberer20",
+                                            "designerId": "5594509b-acf5-44cf-b97d-21368ba64286"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "rightName",
+                                                "text": "权限名称",
+                                                "width": 200
+                                            },
+                                            "name": "MyColumn144",
+                                            "designerId": "4d249eee-43eb-4688-b50c-f014312f07f3"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "rightId",
+                                                "text": "权限编号"
+                                            },
+                                            "name": "MyColumn145",
+                                            "designerId": "b1e81315-ce1e-4e4c-b0e0-5f3e17e5dbd4"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "url",
+                                                "text": "权限地址",
+                                                "width": 150
+                                            },
+                                            "name": "MyColumn146",
+                                            "designerId": "b7126866-59a8-4306-84cb-06c985484fa9"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Boolean",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "enabled",
+                                                "falseText": "否",
+                                                "text": "是否启用",
+                                                "trueText": "是",
+                                                "width": 60
+                                            },
+                                            "name": "MyBooleanColumn6",
+                                            "designerId": "a685e1e6-56d4-4ccf-acbc-f7e1cd3c5af4"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "description",
+                                                "text": "描述",
+                                                "width": 400
+                                            },
+                                            "name": "MyColumn147",
+                                            "designerId": "701b40a4-ce3a-4b25-9f33-a49cc214274b"
+                                        },
+                                        {
+                                            "type": "Ext.grid.View",
+                                            "reference": {
+                                                "name": "viewConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyGridView26",
+                                            "designerId": "a79baec1-a8d1-4184-a02f-f5f7da72567c"
+                                        },
+                                        {
+                                            "type": "Ext.selection.CheckboxModel",
+                                            "reference": {
+                                                "name": "selModel",
+                                                "type": "object"
+                                            },
+                                            "codeClass": "Ext.selection.CheckboxModel",
+                                            "userConfig": {
+                                                "designer|displayName": null
+                                            },
+                                            "name": "MyCheckboxSelectionModel19",
+                                            "designerId": "2b791d0b-7f42-47b1-99b0-a838b4b66deb"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoScroll": true,
+                                "layout": "fit",
+                                "title": "部门信息管理"
+                            },
+                            "name": "MyPanel31",
+                            "designerId": "14a9faa1-50f7-4118-b903-55d2c837457c",
+                            "cn": [
+                                {
+                                    "type": "Ext.tab.Tab",
+                                    "reference": {
+                                        "name": "tabConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "TabConfig3",
+                                    "designerId": "25f08fff-863b-458b-bc56-d6201b553806"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "name": "MyToolbar34",
+                                    "designerId": "df6d013d-7a58-45cd-b1cf-a71c37a8136f",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "emptyText": "请输入搜索关键字",
+                                                "fieldLabel": null,
+                                                "id": "searchKeyword_DeptInfo",
+                                                "layout|flex": null
+                                            },
+                                            "name": "MyTextField133",
+                                            "designerId": "157f5582-4952-4583-ae86-421de4c1198e"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/file_view0.png",
+                                                "layout|flex": null,
+                                                "text": "搜索"
+                                            },
+                                            "name": "MyButton136",
+                                            "designerId": "ed880cef-47a1-475f-bf47-48d63a711434",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick31111",
+                                                        "implHandler": [
+                                                            "var getKeyword = Ext.getCmp('searchKeyword_DeptInfo').getValue();\r",
+                                                            "console.log(\"keyword:\",getKeyword);\r",
+                                                            "var mystore = Ext.StoreMgr.get('uDeptInfoStore'); //获得store对象\r",
+                                                            "//在load事件中添加参数\r",
+                                                            "mystore.load();\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick31111",
+                                                    "designerId": "31a9aef1-201b-4dbb-871a-199802a1b599"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_refresh.png",
+                                                "layout|flex": null,
+                                                "text": "刷新"
+                                            },
+                                            "name": "MyButton137",
+                                            "designerId": "be777270-7020-48ee-a642-dd5bd984c685",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick111111",
+                                                        "implHandler": [
+                                                            "Ext.getCmp('searchKeyword_DeptInfo').setValue('');\r",
+                                                            "var mystore = Ext.StoreMgr.get('uDeptInfoStore'); //获得store对象\r",
+                                                            "mystore.reload();\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick111111",
+                                                    "designerId": "65859d73-aa6c-48af-b837-d1766cebd0b0"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "添加新部门"
+                                            },
+                                            "name": "MyButton138",
+                                            "designerId": "708d18e7-506c-49c8-927b-00ed36e3d4f8",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick211111",
+                                                        "implHandler": [
+                                                            "//取得上一级部门id\r",
+                                                            "var grid = Ext.getCmp('deptInfoGrid');\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "if(record.length === 0){\r",
+                                                            "    Ext.MessageBox.confirm('提示','添加新的部门需要先指定上一级部门，如果您没有在列表中勾选上一级部门，</br>那么您添加的部门为最高级别。确定添加？', function(btn){        \r",
+                                                            "        if(btn == \"yes\"){            \r",
+                                                            "            doShowWin(0);\r",
+                                                            "        }\r",
+                                                            "    });\r",
+                                                            "    return;\r",
+                                                            "\r",
+                                                            "}else{    \r",
+                                                            "    doShowWin(1);\r",
+                                                            "}\r",
+                                                            "function doShowWin(level){\r",
+                                                            "    console.log('level:',level);\r",
+                                                            "    var win = Ext.widget('db_DeptInfoAddWindow');\r",
+                                                            "    win.show();\r",
+                                                            "\r",
+                                                            "    var deptIdField = Ext.getCmp('deptAdd_parentDeptId');\r",
+                                                            "    //对显示的内容进行处理\r",
+                                                            "    switch(level){\r",
+                                                            "        case 0:\t//如果没有上级部门\r",
+                                                            "        deptIdField.setValue(\"0000000000\");\t//如果没有上一级部门，则设为0\r",
+                                                            "        break;\r",
+                                                            "        case 1:\t//如果有上级部门\r",
+                                                            "        var  deptId = record[0].get(\"deptId\");\t//取得上级部门id\r",
+                                                            "        var deptName = record[0].get(\"deptName\");\t//取得上级部门名称\r",
+                                                            "        deptIdField.setValue(deptId);\r",
+                                                            "        //对部门名称进行处理\r",
+                                                            "        var deptNameField = Ext.getCmp('deptAdd_parentDeptName');\r",
+                                                            "        var index = deptName.lastIndexOf(\"&nbsp;\");\r",
+                                                            "        if(index >= 0){\r",
+                                                            "            var substr = deptName.substring(index+6,deptName.length);\r",
+                                                            "            deptNameField.setValue(substr);\r",
+                                                            "        }    \r",
+                                                            "        break;\r",
+                                                            "    }\r",
+                                                            "\r",
+                                                            "}"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick211111",
+                                                    "designerId": "6bcf8f86-b574-4a2b-bd34-54398e0496bb"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "编辑"
+                                            },
+                                            "name": "MyButton139",
+                                            "designerId": "70815b88-d540-4b3c-af57-45cc028fa09b",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick2111111",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('deptInfoGrid');\r",
+                                                            "\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "\r",
+                                                            "if(record.length === 0){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的行！');\r",
+                                                            "    return;\r",
+                                                            "}else if(record.length >1){\r",
+                                                            "    Ext.Msg.alert('提示','您只能编辑一个部门信息，请重新选择。');\r",
+                                                            "    return;\r",
+                                                            "}else {    \r",
+                                                            "    var win = Ext.widget('db_DeptInfoWindow');\r",
+                                                            "    win.show();\r",
+                                                            "    \r",
+                                                            "    var form = Ext.getCmp('db_DeptInfoWindowForm');\r",
+                                                            "    form.loadRecord(record[0]);\r",
+                                                            "    \r",
+                                                            "    //对显示的内容进行处理\r",
+                                                            "    //对部门名称进行处理\r",
+                                                            "    var deptNameField = Ext.getCmp('deptWindow_deptName');\r",
+                                                            "    var value = deptNameField.getValue();\r",
+                                                            "    var index = value.lastIndexOf(\"&nbsp;\");\r",
+                                                            "    console.log(index);\r",
+                                                            "    if(index>=0){\r",
+                                                            "        var substr = value.substring(index+6,value.length);\r",
+                                                            "        deptNameField.setValue(substr);\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick2111111",
+                                                    "designerId": "140ed718-a295-417d-a634-44c3d5737584"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "icon": "images/table_add.png",
+                                                "layout|flex": null,
+                                                "text": "删除"
+                                            },
+                                            "name": "MyButton140",
+                                            "designerId": "6547af44-573a-4e9f-8091-e68bfad6cc0a",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick21111111",
+                                                        "implHandler": [
+                                                            "var grid = Ext.getCmp('deptInfoGrid');\r",
+                                                            "var record = grid.getSelectionModel().getSelection();\r",
+                                                            "\r",
+                                                            "if(record.length === 0){\r",
+                                                            "    Ext.Msg.alert('提示','请先选择您要操作的行！');\r",
+                                                            "    return;\r",
+                                                            "}else{\r",
+                                                            "    var  deptIds =new Array(record.length);\r",
+                                                            "    var msg = '';\r",
+                                                            "    for(var i = 0;i<record.length;i++){\r",
+                                                            "        deptIds[i] = record[i].get(\"deptId\");\r",
+                                                            "        //去除权限名称的空格\r",
+                                                            "        //去除名称的空格\r",
+                                                            "        var deptName = record[i].get('deptName');\r",
+                                                            "        var index = deptName.lastIndexOf(\"&nbsp;\");\r",
+                                                            "        var substr = '';\r",
+                                                            "        if(index>=0){\r",
+                                                            "            substr = deptName.substring(index+6,deptName.length);    \r",
+                                                            "        }\r",
+                                                            "        msg += substr + '<br/>';\r",
+                                                            "    }\r",
+                                                            "\r",
+                                                            "    Ext.Msg.confirm('提示', '您正在删除以下部门：<br/>' + msg+'确认删除？', getResult);\r",
+                                                            "    function getResult(confirm)\r",
+                                                            "    {\r",
+                                                            "        if (confirm == \"yes\"){            \r",
+                                                            "            Ext.Ajax.request(\r",
+                                                            "            {\r",
+                                                            "                url : 'del_DeptInfoById',\r",
+                                                            "                params :\r",
+                                                            "                {\r",
+                                                            "                    deptIds : deptIds\r",
+                                                            "                },            \r",
+                                                            "                success : function (response){\r",
+                                                            "                    Ext.Msg.alert('成功提示', '记录删除成功。');\r",
+                                                            "                    //successResult();\r",
+                                                            "                    var mystore = Ext.StoreMgr.get('uDeptInfoStore');\r",
+                                                            "                    mystore.load();\r",
+                                                            "                },\r",
+                                                            "                failure : function (response){\r",
+                                                            "                    //failedResult();\r",
+                                                            "                    // Ext.Msg.alert('失败提示', '记录删除失败。');\r",
+                                                            "                }\r",
+                                                            "            });\r",
+                                                            "        }\r",
+                                                            "    }\r",
+                                                            "}\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            "\r",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick21111111",
+                                                    "designerId": "bcef1a22-c0aa-4df0-ac0f-1f6ef0d2f4ff"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoScroll": true,
+                                        "id": "deptInfoGrid",
+                                        "store": "uDeptInfoStore",
+                                        "title": null
+                                    },
+                                    "name": "MyGridPanel27",
+                                    "designerId": "0ffd5e96-11a4-4b6b-931c-114653d0bf80",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.grid.RowNumberer",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyRowNumberer21",
+                                            "designerId": "39783ff0-5329-4e9f-baf1-ed375fc62785"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "deptName",
+                                                "text": "部门名称",
+                                                "width": 200
+                                            },
+                                            "name": "MyColumn148",
+                                            "designerId": "a9360d9c-94c5-46b6-b023-cc68606a5914"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "deptId",
+                                                "text": "部门编号"
+                                            },
+                                            "name": "MyColumn149",
+                                            "designerId": "03e6b3fb-5aab-4237-bed8-e405f9d2770f"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Boolean",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "enabled",
+                                                "falseText": "否",
+                                                "text": "可用",
+                                                "trueText": "是",
+                                                "width": 50
+                                            },
+                                            "name": "MyBooleanColumn7",
+                                            "designerId": "ce943932-0215-4df8-8ade-908959d7e5c9"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "description",
+                                                "text": "描述",
+                                                "width": 400
+                                            },
+                                            "name": "MyColumn150",
+                                            "designerId": "fd696212-b2a4-4c52-b97f-3bcd6c1461c8"
+                                        },
+                                        {
+                                            "type": "Ext.grid.View",
+                                            "reference": {
+                                                "name": "viewConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyGridView27",
+                                            "designerId": "a20af8f2-16c4-44c3-9ddf-74d7dc5d38c6"
+                                        },
+                                        {
+                                            "type": "Ext.selection.CheckboxModel",
+                                            "reference": {
+                                                "name": "selModel",
+                                                "type": "object"
+                                            },
+                                            "codeClass": "Ext.selection.CheckboxModel",
+                                            "name": "MyCheckboxSelectionModel20",
+                                            "designerId": "bf5341cf-bfec-4cae-b5ff-3697bd0ad8e9"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

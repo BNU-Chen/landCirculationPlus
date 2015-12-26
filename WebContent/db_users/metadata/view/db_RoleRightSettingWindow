@@ -1,0 +1,352 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "db_RoleRightSettingWindow",
+        "designer|userClassName": "db_RoleRightSettingWindow",
+        "height": 358,
+        "id": "db_RoleRightSettingWindow",
+        "layout": "fit",
+        "title": "用户角色设置",
+        "width": 718
+    },
+    "designerId": "70dfb4ad-ecc2-4168-9ba0-284e903350c8",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "id": "db_RoleRightSettingGrid",
+                "store": "uRightInfoStore",
+                "title": null
+            },
+            "name": "MyGridPanel81",
+            "designerId": "06b4471d-7465-46b4-b588-e77a4d297ae4",
+            "cn": [
+                {
+                    "type": "Ext.grid.RowNumberer",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "序号",
+                        "text": "序号",
+                        "width": 40
+                    },
+                    "name": "MyRowNumberer72",
+                    "designerId": "12ca11dd-be28-4c03-bfd9-8ee9fd117767"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "rightName",
+                        "text": "权限名称",
+                        "width": 200
+                    },
+                    "name": "MyColumn345",
+                    "designerId": "af39ecd8-641a-4b9b-8699-83aca4ab52b5"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "rightId",
+                        "text": "权限编号"
+                    },
+                    "name": "MyColumn346",
+                    "designerId": "a9a0ad5c-d05e-4802-99ff-f8990e02a221"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "rightIndex",
+                        "text": "权限索引",
+                        "width": 100
+                    },
+                    "name": "MyColumn347",
+                    "designerId": "1b66e05a-8816-4687-af3a-114a720658d8"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "url",
+                        "text": "权限地址",
+                        "width": 250
+                    },
+                    "name": "MyColumn348",
+                    "designerId": "a4276dac-803c-4689-a436-be08924ef4b5"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "description",
+                        "text": "描述",
+                        "width": 200
+                    },
+                    "name": "MyColumn349",
+                    "designerId": "b4d128a2-82d8-4212-8b7f-b2ffb2ed2387"
+                },
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView81",
+                    "designerId": "37637083-b8a7-4744-a966-7af1907b25a3"
+                },
+                {
+                    "type": "Ext.selection.CheckboxModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.CheckboxModel",
+                    "userConfig": {
+                        "designer|displayName": null
+                    },
+                    "name": "MyCheckboxSelectionModel72",
+                    "designerId": "88c3a227-a295-4a1a-8c3e-86263784902e"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom"
+                    },
+                    "name": "MyToolbar103",
+                    "designerId": "40f57334-aa78-4dab-a60d-c6b302ed572c",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "rrSet_roleId",
+                                "layout|flex": null,
+                                "text": "角色编号"
+                            },
+                            "name": "MyLabel20",
+                            "designerId": "dfc46151-999b-4bdc-8a9c-1474afa85965"
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "name": "MyFill13",
+                            "designerId": "524648ea-90f1-4a95-a395-2d4ede077477"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "取消"
+                            },
+                            "name": "MyButton388",
+                            "designerId": "4e756fd1-2627-4324-bc88-28282dbfc610",
+                            "cn": [
+                                {
+                                    "type": "basicfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var win = Ext.getCmp('db_UserRoleSettingWindow');\r",
+                                            "win.close();"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "5e965209-94af-4ee3-95c1-eb52db86d146"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "width": 30
+                            },
+                            "name": "MySpacer11",
+                            "designerId": "34ee8655-ffe2-441c-8efc-1c6c31621dff"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "确定"
+                            },
+                            "name": "MyButton389",
+                            "designerId": "761e42e2-e32b-4429-a6d6-94a6fcaac1fc",
+                            "cn": [
+                                {
+                                    "type": "basicfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var win = Ext.getCmp('db_RoleRightSettingWindow');\r",
+                                            "\r",
+                                            "var roleId = Ext.getCmp('rrSet_roleId').text;\t//获取角色编号\r",
+                                            "var grid = Ext.getCmp('db_RoleRightSettingGrid');\t\t//获取表格grid\r",
+                                            "var recordsSelected = grid.getSelectionModel().getSelection();\t//获取选中的记录\r",
+                                            "\r",
+                                            "if(recordsSelected.length === 0){\r",
+                                            "    Ext.Msg.alert('提示','请先选择您要操作的行！');    \r",
+                                            "    return;    \r",
+                                            "}else{\r",
+                                            "    //获取用户角色代码数组\r",
+                                            "    var  rightIds =new Array(recordsSelected.length);\r",
+                                            "    for(var i = 0;i<recordsSelected.length;i++){\r",
+                                            "        rightIds[i] = recordsSelected[i].get(\"rightId\");\r",
+                                            "    }\r",
+                                            "\r",
+                                            "    //更新该用户的角色信息\r",
+                                            "    Ext.Ajax.request(\r",
+                                            "    {\r",
+                                            "        url : 'update_RoleRight',\r",
+                                            "        params :\r",
+                                            "        {\r",
+                                            "            roleId:roleId,\r",
+                                            "            rightIds : rightIds\r",
+                                            "        },\r",
+                                            "        success : function (response){\r",
+                                            "            Ext.Msg.alert('成功提示', '角色的权限信息更新成功。');\r",
+                                            "            win.close();\r",
+                                            "        },\r",
+                                            "        failure : function (response){        \r",
+                                            "            Ext.Msg.alert('失败提示', '角色的权限信息更新失败，请刷新后重试。');\r",
+                                            "        }\r",
+                                            "    });\r",
+                                            "\r",
+                                            "\r",
+                                            "\r",
+                                            "}"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "0ceff0f2-5545-4faf-9bfe-982f699154d7"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onDb_RoleRightSettingGridAfterRender",
+                        "implHandler": [
+                            "var roleId = Ext.getCmp('rrSet_roleId').text;\r",
+                            "\r",
+                            "//查询该用户的所有角色\r",
+                            "Ext.Ajax.request(\r",
+                            "{\r",
+                            "    url : 'get_RoleRightList',\r",
+                            "    params :\r",
+                            "    {\r",
+                            "        roleId : roleId\r",
+                            "    },            \r",
+                            "    success : function (response){\r",
+                            "        var result=Ext.decode(response.responseText);\r",
+                            "        var roleIds = result.root;\r",
+                            "\r",
+                            "        var store = Ext.StoreMgr.get('uRightInfoStore'); //获得store对象\r",
+                            "\r",
+                            "        for(var index = 0;index < roleIds.length;index++){\r",
+                            "            var rightId = roleIds[index];            \r",
+                            "            var record = store.findRecord(\"rightId\", rightId, 0, true);\r",
+                            "            Ext.getCmp('db_RoleRightSettingGrid').getSelectionModel().select(record,true);\r",
+                            "        }\r",
+                            "    },\r",
+                            "    failure : function (response){\r",
+                            "        //failedResult();\r",
+                            "        // Ext.Msg.alert('失败提示', '记录删除失败。');\r",
+                            "    }\r",
+                            "});"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "name": "onDb_RoleRightSettingGridAfterRender",
+                    "designerId": "be1566f0-922f-4df7-828e-283ffeaa97eb"
+                }
+            ]
+        }
+    ]
+}
