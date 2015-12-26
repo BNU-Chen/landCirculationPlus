@@ -29,6 +29,6 @@
     },
     "editMode": "design",
     "userSettings": {
-        "no-cmd": false
+        "no-cmd": true
     }
 }
