@@ -1,0 +1,24 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "TaishiNumberTextField",
+            "TaishiNumber_Pie"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "TaishiNumber_Pie",
+            "TaishiNumberCombox"
+        ],
+        "views": [
+            "MyViewport"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}
