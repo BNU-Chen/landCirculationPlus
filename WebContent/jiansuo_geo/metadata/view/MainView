@@ -1,0 +1,194 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "MainView",
+        "designer|userClassName": "MainView",
+        "id": "myViewPort",
+        "layout": "border"
+    },
+    "designerId": "cf4ba8e6-6ee4-4903-9b13-4617964eb1bc",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "id": "htglTabPanelMain",
+                "itemId": null,
+                "layout|region": "center"
+            },
+            "name": "MyTabPanel10",
+            "designerId": "c4187c1b-a9df-4a6b-ba83-5c362f693a19",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "infoarticlezxdttab",
+                    "designerId": "62fdd4e3-50be-4439-9256-b411cf76ce46",
+                    "masterInstanceId": "56977a6d-f04b-4659-acc8-e7b201fd16cd",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig28",
+                            "designerId": "758411a1-17e5-4e38-9759-4cc0614f31d8"
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onHtglTabPanelMainShow",
+                        "implHandler": [
+                            "Ext.Ajax.request({\r",
+                            "    url:'timer_creat_xml'\r",
+                            "\r",
+                            "});"
+                        ],
+                        "name": "show",
+                        "scope": "me"
+                    },
+                    "name": "onHtglTabPanelMainShow",
+                    "designerId": "396de116-a4aa-4023-8b3b-2567ee8ec396"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": true,
+                "id": null,
+                "layout": "accordion",
+                "layout|region": "west",
+                "layout|split": true,
+                "title": "管理面板",
+                "width": 150
+            },
+            "name": "MyPanel36",
+            "designerId": "b49d0b2c-6309-4819-90e4-79f1294cbecc",
+            "cn": [
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "root": [
+                            "{expanded: true,\r",
+                            "children: [\r",
+                            "    {\r",
+                            "        id: '',\r",
+                            "        text: '信息检索设置',\r",
+                            "        icon:'images/tubiao.png',\r",
+                            "        children:[\r",
+                            "        \t{\r",
+                            "        \t\tid: 'Crawl',\r",
+                            "                text: '检索网站设置',\r",
+                            "                icon:'images/tubiao.jpg',\r",
+                            "                leaf: true\r",
+                            "    \t\t},\r",
+                            "            \r",
+                            "            {\r",
+                            "                id: 'CrawlInfo',\r",
+                            "                text: '查看检索信息列表',\r",
+                            "                icon:'images/tubiao.jpg',\r",
+                            "                leaf: true\r",
+                            "            },\r",
+                            "            {\r",
+                            "                id: 'Extract',\r",
+                            "                text: '字段存储设置',\r",
+                            "                icon:'images/tubiao.jpg',\r",
+                            "                leaf: true\r",
+                            "            },\r",
+                            "            {\r",
+                            "                id: 'Keywords',\r",
+                            "                text: '查询主题词设置',\r",
+                            "                icon:'images/tubiao.jpg',\r",
+                            "                leaf: true\r",
+                            "            }\r",
+                            "        ]\r",
+                            "    },\r",
+                            "    {\r",
+                            "        id: 'ccQueryStatisticsTab',\r",
+                            "        text: '查询与统计',\r",
+                            "        icon:'images/tubiao.png',\r",
+                            "        leaf: true\r",
+                            "    }\r",
+                            "]}"
+                        ],
+                        "rootVisible": false,
+                        "title": "信息检索与统计"
+                    },
+                    "name": "MyTreePanel4",
+                    "designerId": "89bbcf42-5bca-491c-9fe2-1670ae83920f",
+                    "cn": [
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTreeView4",
+                            "designerId": "480f7fde-0504-424c-a5a6-8ea0984ac27e"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTreepanelSelectionChange2",
+                                "implHandler": [
+                                    "var xtype = selected[0].get('id');  \r",
+                                    "//Ext.Msg.alert(\"\",xtype);\r",
+                                    "var myTabPanel = Ext.getCmp('htglTabPanelMain');\r",
+                                    "//Ext.Msg.alert(\"\",myTabPanel.id);\r",
+                                    "myTabPanel.removeAll(true);\r",
+                                    "myTabPanel.add(Ext.widget(xtype));"
+                                ],
+                                "name": "selectionchange",
+                                "scope": "me"
+                            },
+                            "name": "onTreepanelSelectionChange2",
+                            "designerId": "9dff72ca-12ba-4744-b85c-2ceb1232f2ec"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
