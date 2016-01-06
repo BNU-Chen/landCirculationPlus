@@ -7,12 +7,19 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "ccQueryStatisticSupplierModel"
+            "ccQueryStatisticSupplierModel",
+            "ccQueryStatisticAreaModel",
+            "ccQueryStatisticPriceModel",
+            "ccQueryStatisticModel",
+            "ccQueryStatisticPieModel"
         ],
         "name": "MyApp",
         "stores": [
             "ccQueryStatisticStore",
-            "ccQueryStatisticSupplierStore"
+            "ccQueryStatisticSupplierStore",
+            "ccQueryStatisticPieStore",
+            "ccQueryStatisticPriceStore",
+            "ccQueryStatisticAreaStore"
         ],
         "views": [
             "MyViewport"

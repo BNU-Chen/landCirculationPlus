@@ -21,11 +21,18 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'ccQueryStatisticSupplierModel'
+        'ccQueryStatisticSupplierModel',
+        'ccQueryStatisticAreaModel',
+        'ccQueryStatisticPriceModel',
+        'ccQueryStatisticModel',
+        'ccQueryStatisticPieModel'
     ],
     stores: [
         'ccQueryStatisticStore',
-        'ccQueryStatisticSupplierStore'
+        'ccQueryStatisticSupplierStore',
+        'ccQueryStatisticPieStore',
+        'ccQueryStatisticPriceStore',
+        'ccQueryStatisticAreaStore'
     ],
     views: [
         'MyViewport'
