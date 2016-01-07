@@ -20,8 +20,25 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
+    models: [
+        'inforArticleModel_extra',
+        'InfoArticleModel',
+        'InfoChannelModel',
+        'infoAreaModel'
+    ],
+    stores: [
+        'ArticlePubNDZCStore',
+        'ArticleDraftNDZCStore',
+        'ArticleRecNDZCStore',
+        'infoArticleStoreVillage',
+        'infoArticleStoreProvice',
+        'infoArticleStoreCity',
+        'infoArticleStoreCounty',
+        'InfoChannelStore'
+    ],
     views: [
-        'MyViewport'
+        'MyViewport',
+        'infoAritcleNDZCNewWindow'
     ],
     name: 'MyApp',
 

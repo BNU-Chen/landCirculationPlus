@@ -3,29 +3,29 @@ package cn.edu.bnu.land.common;
 import org.springframework.context.ApplicationContext;  
 import org.springframework.context.ApplicationContextAware;  
 /** 
- * ÒÔ¾²Ì¬±äÁ¿±£´æSpring ApplicationContext, ¿ÉÔÚÈÎºÎ´úÂëÈÎºÎµØ·½ÈÎºÎÊ±ºòÖÐÈ¡³öApplicaitonContext. 
+ * ï¿½Ô¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Spring ApplicationContext, ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ´ï¿½ï¿½ï¿½ï¿½ÎºÎµØ·ï¿½ï¿½Îºï¿½Ê±ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ApplicaitonContext. 
  *  
  */  
 public class SpringContextHolder implements ApplicationContextAware {  
 	private static ApplicationContext applicationContext;  
 
 	/** 
-	 * ÊµÏÖApplicationContextAware½Ó¿ÚµÄcontext×¢Èëº¯Êý, ½«Æä´æÈë¾²Ì¬±äÁ¿. 
+	 * Êµï¿½ï¿½ApplicationContextAwareï¿½Ó¿Úµï¿½context×¢ï¿½ëº¯ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¾²Ì¬ï¿½ï¿½ï¿½ï¿½. 
 	 */  
 	public void setApplicationContext(ApplicationContext applicationContext) {  
 		SpringContextHolder.applicationContext = applicationContext; // NOSONAR  
 	}  
 
 	/** 
-	 * È¡µÃ´æ´¢ÔÚ¾²Ì¬±äÁ¿ÖÐµÄApplicationContext. 
+	 * È¡ï¿½Ã´æ´¢ï¿½Ú¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ApplicationContext. 
 	 */  
 	public static ApplicationContext getApplicationContext() {  
 		checkApplicationContext();  
 		return applicationContext;  
-	}  
-
+	}  	
+	
 	/** 
-	 * ´Ó¾²Ì¬±äÁ¿ApplicationContextÖÐÈ¡µÃBean, ×Ô¶¯×ªÐÍÎªËù¸³Öµ¶ÔÏóµÄÀàÐÍ. 
+	 * ï¿½Ó¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ApplicationContextï¿½ï¿½È¡ï¿½ï¿½Bean, ï¿½Ô¶ï¿½×ªï¿½ï¿½Îªï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. 
 	 */  
 	@SuppressWarnings("unchecked")  
 	public static <T> T getBean(String name) {  
@@ -34,7 +34,7 @@ public class SpringContextHolder implements ApplicationContextAware {
 	}  
 
 	/** 
-	 * ´Ó¾²Ì¬±äÁ¿ApplicationContextÖÐÈ¡µÃBean, ×Ô¶¯×ªÐÍÎªËù¸³Öµ¶ÔÏóµÄÀàÐÍ. 
+	 * ï¿½Ó¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ApplicationContextï¿½ï¿½È¡ï¿½ï¿½Bean, ï¿½Ô¶ï¿½×ªï¿½ï¿½Îªï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. 
 	 */  
 	@SuppressWarnings("unchecked")  
 	public static <T> T getBean(Class<T> clazz) {  
@@ -43,7 +43,7 @@ public class SpringContextHolder implements ApplicationContextAware {
 	}  
 
 	/** 
-	 * Çå³ýapplicationContext¾²Ì¬±äÁ¿. 
+	 * ï¿½ï¿½ï¿½applicationContextï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½. 
 	 */  
 	public static void cleanApplicationContext() {  
 		applicationContext = null;  
@@ -51,7 +51,7 @@ public class SpringContextHolder implements ApplicationContextAware {
 
 	private static void checkApplicationContext() {  
 		if (applicationContext == null) {  
-			throw new IllegalStateException("applicaitonContextÎ´×¢Èë,ÇëÔÚapplicationContext.xmlÖÐ¶¨ÒåSpringContextHolder");  
+			throw new IllegalStateException("applicaitonContextÎ´×¢ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½applicationContext.xmlï¿½Ð¶ï¿½ï¿½ï¿½SpringContextHolder");  
 		}  
 	}  
 }  

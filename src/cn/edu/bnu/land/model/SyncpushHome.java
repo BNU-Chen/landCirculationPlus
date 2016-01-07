@@ -371,5 +371,12 @@ public class SyncpushHome {
 		return syncpush;
 	}
 	
+	public List<User> getAllData(){
+		String hql="from Syncpush u where 1=1 ";
+		List<User> results=null;
+		org.hibernate.Query query=sessionFactory.getCurrentSession().createQuery(hql);
+		results=(List<User>)query.list();
+		return results;
+	}
 	
 }

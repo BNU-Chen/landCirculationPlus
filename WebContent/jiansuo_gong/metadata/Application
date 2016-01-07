@@ -6,9 +6,26 @@
     },
     "codeClass": null,
     "userConfig": {
+        "models": [
+            "inforArticleModel_extra",
+            "InfoArticleModel",
+            "InfoChannelModel",
+            "infoAreaModel"
+        ],
         "name": "MyApp",
+        "stores": [
+            "ArticlePubNDZCStore",
+            "ArticleDraftNDZCStore",
+            "ArticleRecNDZCStore",
+            "infoArticleStoreVillage",
+            "infoArticleStoreProvice",
+            "infoArticleStoreCity",
+            "infoArticleStoreCounty",
+            "InfoChannelStore"
+        ],
         "views": [
-            "MyViewport"
+            "MyViewport",
+            "infoAritcleNDZCNewWindow"
         ]
     },
     "name": "Application",

@@ -3,6 +3,8 @@ package cn.edu.bnu.land.web;
 import java.io.IOException;
 import java.util.Map;
 
+import javax.mail.MessagingException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,9 +14,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.edu.bnu.land.common.Encoder;
 import cn.edu.bnu.land.service.QueryStatisticInfoService;
+import cn.edu.bnu.land.service.UserService;
 
 @Controller
 public class QueryStatisticInfo {
+	private UserService userService;
 	private QueryStatisticInfoService queryService;
 	
     @Autowired
