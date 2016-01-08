@@ -6,9 +6,21 @@
     },
     "codeClass": null,
     "userConfig": {
+        "models": [
+            "inforArticleModel_extra",
+            "InfoArticleModel",
+            "gxUsersData"
+        ],
         "name": "MyApp",
+        "stores": [
+            "ArticlePubNDZRStore",
+            "ArticleDraftNDZRStore",
+            "ArticleRecNDZRStore",
+            "gxuserStoreNDZR"
+        ],
         "views": [
-            "MyViewport"
+            "MyViewport",
+            "infoAritcleNDZRNewWindow"
         ]
     },
     "name": "Application",

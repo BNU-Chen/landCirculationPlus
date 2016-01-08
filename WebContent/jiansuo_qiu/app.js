@@ -20,8 +20,20 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
+    models: [
+        'inforArticleModel_extra',
+        'InfoArticleModel',
+        'gxUsersData'
+    ],
+    stores: [
+        'ArticlePubNDZRStore',
+        'ArticleDraftNDZRStore',
+        'ArticleRecNDZRStore',
+        'gxuserStoreNDZR'
+    ],
     views: [
-        'MyViewport'
+        'MyViewport',
+        'infoAritcleNDZRNewWindow'
     ],
     name: 'MyApp',
 

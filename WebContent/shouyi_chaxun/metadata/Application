@@ -1,0 +1,24 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Shouyi_Find",
+            "ShouyiFind_Zijin"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "ShouyiFind",
+            "ShouyiFind_Zijin"
+        ],
+        "views": [
+            "MyViewport"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

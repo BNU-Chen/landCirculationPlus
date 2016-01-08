@@ -1,0 +1,64 @@
+{
+    "name": "PlusView",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1119-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "d486fdd5-8123-40ba-8693-bd2d2474b6c6",
+            "a354ca40-1983-476d-b8c3-bf01c7703031",
+            "c8017978-6274-489b-82ba-2fb863b35515",
+            "c14d6297-5968-4bb3-9f43-4f9b418fbb82"
+        ],
+        "store": [
+            "617e98a8-417d-4c6c-be84-9a580e72ab41",
+            "e6f340ec-b8ed-45a8-beb8-dd8f8e335297",
+            "07bad1c0-5e07-4da7-b0bb-90dbf43e75c6",
+            "6a643def-0677-48ec-ba3d-bff172145654",
+            "20c13e9f-fa52-4bd0-b506-ea033a070111",
+            "ef60d4a4-a52a-4062-ae47-c78ca9c0fdaa"
+        ],
+        "controller": [],
+        "model": [
+            "2c8a0817-19fc-4ab6-bcd4-3214cc124939",
+            "9643d074-2b74-426d-92a5-71617b21fd2f",
+            "221a4575-1d73-4d96-bbe4-cb9f38b9aac6",
+            "55245382-87d2-42f8-80f1-9b08521b3d11",
+            "8d45f37d-1565-42c4-a82b-b9e9c5b6f43a"
+        ],
+        "resource": [
+            "9a6e6869-8ac4-4e19-84b1-866c0a0bc55e",
+            "8c622eb8-f776-4352-9e8f-537669feec1c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
