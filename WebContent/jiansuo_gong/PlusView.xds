@@ -1,0 +1,63 @@
+{
+    "name": "PlusView",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1119-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "59ebbce4-a270-4967-a528-25b161175fe0",
+            "c8017978-6274-489b-82ba-2fb863b35515"
+        ],
+        "store": [
+            "3190655d-e22a-4a37-9b17-dd03c2e2341d",
+            "b1b645e5-cafc-46de-8ce8-629e93ac7c47",
+            "8b929fb3-26c3-4239-a9eb-5aacb74be0fa",
+            "aabe7dbe-1a87-4d98-81d9-e4cb08e28a49",
+            "602e7a07-3d13-4546-b746-6348b6db826e",
+            "61fcbc06-13ec-489c-b66b-e3d56531d5d9",
+            "31c09be4-064c-4e55-bbdd-cd283a600f11",
+            "c32ac757-1d2b-4d4a-96d5-694bfea865ba"
+        ],
+        "controller": [],
+        "model": [
+            "47460997-9ecb-4c93-829b-674506bb38c3",
+            "03c26f4f-27e2-44c9-a54b-382625f6fe06",
+            "d18e575b-da4d-4bea-b797-9b0e2c42b26a",
+            "60651080-6833-496f-a9fc-03e6aa4f3407"
+        ],
+        "resource": [
+            "9a6e6869-8ac4-4e19-84b1-866c0a0bc55e",
+            "8c622eb8-f776-4352-9e8f-537669feec1c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

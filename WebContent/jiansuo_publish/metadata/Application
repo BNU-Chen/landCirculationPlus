@@ -1,0 +1,26 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "InfoArticleModel",
+            "InfoChannelModel"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "ArticlePubTZGGStore",
+            "ArticleDraftTZGGStore",
+            "InfoChannelStore",
+            "ArticleRecTZGGStore"
+        ],
+        "views": [
+            "MyViewport"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

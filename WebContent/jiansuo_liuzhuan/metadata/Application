@@ -1,0 +1,30 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "ccQueryStatisticSupplierModel",
+            "ccQueryStatisticAreaModel",
+            "ccQueryStatisticPriceModel",
+            "ccQueryStatisticModel",
+            "ccQueryStatisticPieModel"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "ccQueryStatisticStore",
+            "ccQueryStatisticSupplierStore",
+            "ccQueryStatisticPieStore",
+            "ccQueryStatisticPriceStore",
+            "ccQueryStatisticAreaStore"
+        ],
+        "views": [
+            "MyViewport"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

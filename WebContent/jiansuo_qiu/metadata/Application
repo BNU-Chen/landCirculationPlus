@@ -1,0 +1,28 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "inforArticleModel_extra",
+            "InfoArticleModel",
+            "gxUsersData"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "ArticlePubNDZRStore",
+            "ArticleDraftNDZRStore",
+            "ArticleRecNDZRStore",
+            "gxuserStoreNDZR"
+        ],
+        "views": [
+            "MyViewport",
+            "infoAritcleNDZRNewWindow"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

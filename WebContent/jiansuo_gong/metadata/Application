@@ -1,0 +1,33 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "inforArticleModel_extra",
+            "InfoArticleModel",
+            "InfoChannelModel",
+            "infoAreaModel"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "ArticlePubNDZCStore",
+            "ArticleDraftNDZCStore",
+            "ArticleRecNDZCStore",
+            "infoArticleStoreVillage",
+            "infoArticleStoreProvice",
+            "infoArticleStoreCity",
+            "infoArticleStoreCounty",
+            "InfoChannelStore"
+        ],
+        "views": [
+            "MyViewport",
+            "infoAritcleNDZCNewWindow"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

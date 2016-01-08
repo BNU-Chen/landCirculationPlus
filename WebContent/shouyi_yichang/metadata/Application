@@ -1,0 +1,34 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "ShouyiAlarm_Category",
+            "ShouyiAlarmTable",
+            "ShouyiAlarm_Pie",
+            "ShouyiAlarm_Canshu",
+            "ShouyiCombox"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "ShouyiAlarm_Canshu",
+            "ShouyiAlarm_Category",
+            "ShouyiAlarmTable",
+            "ShouyiAlarmCombox",
+            "ShouyiAlarm_Pie",
+            "ShouyiCombox"
+        ],
+        "views": [
+            "MyViewport",
+            "ShouyiAlarm_Canshu",
+            "ShouyiAlarm_Chart",
+            "ShouyiAlarm"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

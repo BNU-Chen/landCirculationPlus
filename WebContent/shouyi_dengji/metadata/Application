@@ -1,0 +1,25 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "ShouyiCombox",
+            "ShouyiFind_Zijin"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "ShouyiRegisterHtbh",
+            "ShouyiFind_Zijin",
+            "ShouyiCombox"
+        ],
+        "views": [
+            "MyViewport"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

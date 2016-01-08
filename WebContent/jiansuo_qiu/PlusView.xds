@@ -1,0 +1,58 @@
+{
+    "name": "PlusView",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1119-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "c8017978-6274-489b-82ba-2fb863b35515",
+            "13e2a114-183b-4169-ae45-c2cb51fb22df"
+        ],
+        "store": [
+            "0c823540-6b52-46c6-81a2-f9993619bcb4",
+            "003163ff-6b35-48cc-ae12-abcbdeb84735",
+            "16c6d697-7ee7-4215-b23d-1f2fa9366405",
+            "feb771b2-4ec7-464a-85a9-1f6d79f5b1f0"
+        ],
+        "controller": [],
+        "model": [
+            "47460997-9ecb-4c93-829b-674506bb38c3",
+            "03c26f4f-27e2-44c9-a54b-382625f6fe06",
+            "d39cb41d-04e9-4edc-8ee4-1290249dff10"
+        ],
+        "resource": [
+            "9a6e6869-8ac4-4e19-84b1-866c0a0bc55e",
+            "8c622eb8-f776-4352-9e8f-537669feec1c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
